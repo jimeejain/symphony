@@ -1,0 +1,17 @@
+{
+    "postedJobs": [
+        {
+        "company": "Symphony",
+        "title":"angular,java",
+        "datePosted":"20-08-13",
+        "status":"Open",
+        "jobId":"1234"
+    },
+    {
+        "company": "Google",
+        "title":"java",
+        "datePosted":"21-08-13",
+        "status":"Closed",
+        "jobId":"6666"
+    }]
+}

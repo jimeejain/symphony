@@ -1,0 +1,32 @@
+{
+    "1234": [
+        {
+        "name": "Sujeet",
+        "worksAt":"Infosys",
+        "exp":"3",
+        "ctc":"20",
+        "candidateId":"S101"
+    },
+    {
+        "name": "Shiv",
+        "worksAt":"Systel",
+        "exp":"5",
+        "ctc":"28",
+        "candidateId":"S102"
+    }],
+    "6666": [
+        {
+        "name": "Jimee",
+        "worksAt":"Accolite",
+        "exp":"4",
+        "ctc":"20",
+        "candidateId":"J101"
+    },
+    {
+        "name": "Avisek",
+        "worksAt":"ClearTrip",
+        "exp":"5",
+        "ctc":"28",
+        "candidateId":"A102"
+    }]
+}

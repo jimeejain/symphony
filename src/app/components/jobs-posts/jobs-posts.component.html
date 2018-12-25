@@ -1,0 +1,84 @@
+<section class="searchView">
+  <form
+    (ngSubmit)="
+      initiateSearch(
+        searchInput.value,
+        jobPostStatusIsOpen.checked,
+        jobPostStatusIsClosed.checked
+      )
+    "
+  >
+    <div class="form-group">
+      <label>
+        <input
+          #jobPostStatusIsOpen
+          type="checkbox"
+          class="form-control"
+          name="postedJobStatus"
+          (change)="
+            initiateSearch(
+              searchInput.value,
+              jobPostStatusIsOpen.checked,
+              jobPostStatusIsClosed.checked
+            )
+          "
+        />
+        Open
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        <input
+          #jobPostStatusIsClosed
+          type="checkbox"
+          class="form-control"
+          name="postedJobStatus"
+          (change)="
+            initiateSearch(
+              searchInput.value,
+              jobPostStatusIsOpen.checked,
+              jobPostStatusIsClosed.checked
+            )
+          "
+        />
+        Close
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        Title
+        <input
+          type="text"
+          class="form-control"
+          name="search"
+          #searchInput
+          required
+        />
+      </label>
+    </div>
+    <button type="submit" class="btn btn-success">Search</button>
+  </form>
+</section>
+<section *ngIf="postedJobs">
+  <h1>Posted Jobs</h1>
+  <table>
+    <tr>
+      <th>Company</th>
+      <th>Title</th>
+      <th>Date Posted</th>
+      <th>Status</th>
+    </tr>
+    <tr
+      *ngFor="let item of (postedJobs | async)"
+      (click)="selectedPost = item"
+      [ngClass]="{ highlightRow: this.selectedPost.jobId == item.jobId }"
+    >
+      <td>{{ item.company }}</td>
+      <td>{{ item.title }}</td>
+      <td>{{ item.datePosted }}</td>
+      <td>{{ item.status }}</td>
+    </tr>
+  </table>
+
+  <app-short-lists [postedJob]="selectedPost" *ngIf="selectedPost"></app-short-lists>
+</section>

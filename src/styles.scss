@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+.width-1-2 {
+  width: 50%;
+}
+.flex {
+  display: flex;
+}
+
+table {
+    width:100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    th,td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 15px;
+        text-align: left;
+    }
+
+    tr:nth-child(even) {
+        background-color: #eee;
+      }
+    
+     tr:nth-child(odd) {
+       background-color: #fff;
+      }
+    
+     th {
+        background-color: black;
+        color: white;
+      }
+
+      .highlightRow{
+        background: #b8d1f3 !important;
+    }
+  }
+ 
